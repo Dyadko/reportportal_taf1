@@ -7,7 +7,7 @@ public class Config {
     public static final String API_PASSWORD = System.getenv("rp_api_password");
     public static final String SELENOID_BASE_URL = "http://%s:4444/wd/hub".formatted(System.getProperty("selenoid_url"));
 
-    public static final Boolean RUN_ON_SELENOID = System.getProperty("selenoid_url") != null;
+    public static final boolean RUN_ON_SELENOID = System.getProperty("selenoid_url") != null;
 
     private Config() {
     }

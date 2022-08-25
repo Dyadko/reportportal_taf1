@@ -9,6 +9,10 @@ import org.testng.annotations.BeforeTest;
 public class Base {
     @BeforeTest
     public void setup() {
+        apiHealthCheck();
+    }
+
+    private static void apiHealthCheck() {
         RpHttpClient apiClient = new RpHttpClient(new DefaultSuperAdmin());
         apiClient.healthCheck();
     }

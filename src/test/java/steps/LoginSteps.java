@@ -10,7 +10,7 @@ import java.util.Random;
 
 @Slf4j
 public class LoginSteps {
-    private final NativeLoginPage loginPage;
+    private NativeLoginPage loginPage;
 
     public LoginSteps() {
         loginPage = new NativeLoginPage();
