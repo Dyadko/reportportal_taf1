@@ -2,13 +2,11 @@ package steps;
 
 import elements.components.LeftBar;
 import io.qameta.allure.Step;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 public class LeftBarSteps {
-    private final LeftBar leftBar;
-
-    public LeftBarSteps() {
-        leftBar = new LeftBar();
-    }
+    private final LeftBar leftBar = new LeftBar();
 
     @Step(value = "Left Bar. Open Settings")
     public void openSettings() {
@@ -20,6 +18,7 @@ public class LeftBarSteps {
         leftBar.dashboardIcon.click();
     }
 
+    @Step(value = "Waiting for Left Bar to load...")
     public boolean loaded() {
         return leftBar.loaded();
     }

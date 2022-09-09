@@ -3,17 +3,16 @@ package steps;
 import elements.pages.NativeLoginPage;
 import helpers.AllureHelper;
 import io.qameta.allure.Step;
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import objects.users.User;
 
 @Slf4j
+@NoArgsConstructor
 public class LoginSteps {
-    private final NativeLoginPage loginPage;
+    private final NativeLoginPage loginPage = new NativeLoginPage();
 
-    public LoginSteps() {
-        loginPage = new NativeLoginPage();
-    }
-
+    @Step(value = "Waiting for Login pag to load...")
     public boolean loaded() {
         return loginPage.loaded();
     }

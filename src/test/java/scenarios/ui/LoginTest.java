@@ -15,7 +15,7 @@ import steps.LeftBarSteps;
 import steps.LoginSteps;
 
 @Slf4j
-class LoginTest extends BaseUi {
+class LoginTest extends BaseUiTest {
 
     @DataProvider(name = "users", parallel = true)
     public Object[][] testData() {
@@ -29,10 +29,13 @@ class LoginTest extends BaseUi {
     @Issue("Test-2")
     @Severity(SeverityLevel.CRITICAL)
     void loginWithUserValidCredentials(User user) {
-        BaseSteps.navigate();
         LoginSteps loginSteps = new LoginSteps();
-        loginSteps.login(user);
         LeftBarSteps leftBarSteps = new LeftBarSteps();
+
+        BaseSteps.navigate();
+        loginSteps.loaded();
+        loginSteps.login(user);
+
         Assert.assertTrue(leftBarSteps.loaded());
     }
 }

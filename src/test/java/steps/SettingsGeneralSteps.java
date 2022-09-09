@@ -6,13 +6,11 @@ import elements.components.settings.general.LaunchInactivityTimeoutValue;
 import elements.pages.settings.SettingsGeneralPage;
 import helpers.AllureHelper;
 import io.qameta.allure.Step;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 public class SettingsGeneralSteps {
-    private final SettingsGeneralPage settingsGeneralPage;
-
-    public SettingsGeneralSteps() {
-        settingsGeneralPage = new SettingsGeneralPage();
-    }
+    private final SettingsGeneralPage settingsGeneralPage = new SettingsGeneralPage();
 
     @Step(value = "Get 'Launch Inactivity Timeout' current value")
     public LaunchInactivityTimeoutValue getLaunchInactivityTimeout() {

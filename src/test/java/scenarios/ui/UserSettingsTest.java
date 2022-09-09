@@ -7,11 +7,12 @@ import org.testng.annotations.Test;
 import steps.LeftBarSteps;
 import steps.SettingsGeneralSteps;
 
-class UserSettingsTest extends LoggedInWithUserBase {
+class UserSettingsTest extends LoggedInWithUserBaseTest {
     @Test(description = "A user changes settings")
     @Issue("Test-3")
     void userEditLaunchInactivityTimeout() {
         LaunchInactivityTimeoutValue newValue;
+
         LeftBarSteps leftBarSteps = new LeftBarSteps();
         SettingsGeneralSteps settingsGeneralSteps = new SettingsGeneralSteps();
 
