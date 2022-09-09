@@ -4,21 +4,21 @@
         <listener class-name="listeners.AllureTestListener"/>
     </listeners>
 
-<!--    <test enabled="true" name="API tests">-->
-<!--        <packages>-->
-<!--            <package name="scenarios.api"/>-->
-<!--        </packages>-->
-<!--    </test>-->
-<!--    <test enabled="true" name="TTTest">-->
-<!--        <classes>-->
-<!--            <class name="scenarios.ui.UserSettingsTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test enabled="true" name="Login">-->
-<!--        <classes>-->
-<!--            <class name="scenarios.ui.LoginTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test enabled="true" name="API tests">
+        <packages>
+            <package name="scenarios.api"/>
+        </packages>
+    </test>
+    <test enabled="true" name="TTTest">
+        <classes>
+            <class name="scenarios.ui.UserSettingsTest"/>
+        </classes>
+    </test>
+    <test enabled="true" name="Login">
+        <classes>
+            <class name="scenarios.ui.LoginTest"/>
+        </classes>
+    </test>
     <test enabled="true" name="Loading test">
         <classes>
             <class name="scenarios.ui.DefaultLoadingTest"/>

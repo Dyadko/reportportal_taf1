@@ -6,7 +6,7 @@ import objects.users.DefaultSuperAdmin;
 import org.testng.annotations.BeforeTest;
 
 @Slf4j
-public class Base {
+public class BaseTest {
     @BeforeTest
     public void setup() {
         apiHealthCheck();

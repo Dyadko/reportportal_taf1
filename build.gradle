@@ -39,7 +39,6 @@ ext {
     lombokVersion = '1.18.24'
     aspectVersion = '1.9.9.1'
     restAssuredVersion = '5.1.1'
-    guiceVersion = '5.1.0'
 }
 
 dependencies {
@@ -55,7 +54,6 @@ dependencies {
     testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
     runtimeOnly "org.aspectj:aspectjweaver:$aspectVersion"
     implementation "io.rest-assured:rest-assured:$restAssuredVersion"
-    implementation "com.google.inject:guice:$guiceVersion"
 }
 
 sourceSets {
