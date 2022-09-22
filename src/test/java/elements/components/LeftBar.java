@@ -16,4 +16,7 @@ public class LeftBar extends Component {
 
     @FindBy(css = "a[href*='_personal/dashboard']")
     public WebElement dashboardIcon;
+
+    @FindBy(css = "[href*='_personal/launches']")
+    public WebElement launchesIcon;
 }

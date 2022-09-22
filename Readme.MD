@@ -16,7 +16,8 @@ Supported arguments:
 E.g.:
 
 ```shell
-gradle clean test -Drp.endpoint="http://localhost:8080/" -Ddriver="chrome" -Dselenoid_url=3.66.110.100
+gradle clean test -Drp_endpoint="http://localhost:8080/" -Ddriver="chrome"
+gradle clean test -Drp_endpoint="http://68.183.214.91:8080/" -Ddriver="chrome"
 
 -Dselenoid_url is optional. Tests will run locally by default.
 ```
