@@ -33,9 +33,9 @@ public class LoginTest extends BaseUiTest {
         LeftBarSteps leftBarSteps = new LeftBarSteps();
 
         BaseSteps.navigate();
-        loginSteps.loaded();
+        loginSteps.waitUntilLoaded();
         loginSteps.login(user);
 
-        Assert.assertTrue(leftBarSteps.loaded());
+        Assert.assertTrue(leftBarSteps.waitUntilLoaded());
     }
 }

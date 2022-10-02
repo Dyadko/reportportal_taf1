@@ -34,6 +34,7 @@ public class SettingsGeneralSteps {
         return valueToSelect;
     }
 
+    @Step(value = "Settings. General. Select 'Launch Inactivity Timeout' to {valueToSelect}")
     private void selectLaunchInactivityTimeout(LaunchInactivityTimeoutValue valueToSelect) {
         LaunchInactivityTimeoutList litListComponent;
         settingsGeneralPage.launchInactivityTimeoutDropDown.click();

@@ -13,8 +13,8 @@ public class LoginSteps {
     private final NativeLoginPage loginPage = new NativeLoginPage();
 
     @Step(value = "Waiting for Login pag to load...")
-    public boolean loaded() {
-        return loginPage.loaded();
+    public boolean waitUntilLoaded() {
+        return loginPage.waitUntilLoaded();
     }
 
     @Step("Login with {user.login} user")
@@ -24,6 +24,6 @@ public class LoginSteps {
         loginPage.loginInput.sendKeys(user.getLogin());
         loginPage.passwordInput.sendKeys(user.getPassword());
         loginPage.submitBtn.click();
-        new LeftBarSteps().loaded();
+        new LeftBarSteps().waitUntilLoaded();
     }
 }

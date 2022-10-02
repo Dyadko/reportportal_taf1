@@ -31,7 +31,7 @@ public class LaunchSteps {
     }
 
     @Step(value = "Waiting for Launch page to load...")
-    public boolean loaded() {
-        return launchesPage.loaded();
+    public boolean waitUntilLoaded() {
+        return launchesPage.waitUntilLoaded();
     }
 }

@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 @Execution(ExecutionMode.CONCURRENT)
-class LaunchesTest {
+public class LaunchesTest {
     LoginSteps loginSteps;
     LeftBarSteps leftBarSteps;
     LaunchSteps launchSteps;
@@ -51,10 +51,10 @@ class LaunchesTest {
         leftBarSteps = new LeftBarSteps();
         launchSteps = new LaunchSteps();
 
-        loginSteps.loaded();
+        loginSteps.waitUntilLoaded();
         loginSteps.login(new DefaultUser());
         leftBarSteps.openLaunches();
-        launchSteps.loaded();
+        launchSteps.waitUntilLoaded();
     }
 
     @Test
@@ -64,7 +64,7 @@ class LaunchesTest {
 
     @ParameterizedTest
     @MethodSource("launchesParamStream")
-    void demoLaunchesTest(
+    public void demoLaunchesTest(
             String name,
             String total,
             String passed,

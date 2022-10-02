@@ -76,20 +76,20 @@ sourceSets {
     }
 }
 
-//testng {
-//    useTestNG() {
-//        suites 'src/test/resources/testng.xml'
-//    }
-//    options {
-//        systemProperties(System.getProperties())
-//    }
-//}
-
 test {
-    systemProperties System.properties
-    systemProperty("junit.jupiter.execution.parallel.enabled", true)
-    useJUnitPlatform {
-        includeEngines("junit-jupiter")
+    if ("junit" == findProperty("runner")) {
+        useTestNG() {
+            suites 'src/test/resources/testng.xml'
+        }
+        options {
+            systemProperties(System.getProperties())
+        }
+    } else if ("junit" == findProperty("runner")) {
+        useJUnitPlatform {
+            systemProperties System.properties
+            systemProperty("junit.jupiter.execution.parallel.enabled", true)
+            includeEngines("junit-jupiter")
+        }
     }
 }
 

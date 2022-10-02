@@ -17,7 +17,7 @@ public abstract class ElementContainer implements Loadable {
     }
 
     @Override
-    public boolean loaded() {
+    public boolean waitUntilLoaded() {
         String pageName = this.getClass().getSimpleName();
         log.info("Waiting for {} to load...", pageName);
 

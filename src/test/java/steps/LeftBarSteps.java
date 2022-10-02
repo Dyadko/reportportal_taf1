@@ -24,7 +24,7 @@ public class LeftBarSteps {
     }
 
     @Step(value = "Waiting for Left Bar to load...")
-    public boolean loaded() {
-        return leftBar.loaded();
+    public boolean waitUntilLoaded() {
+        return leftBar.waitUntilLoaded();
     }
 }
