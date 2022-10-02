@@ -18,7 +18,7 @@ public class DefaultLoadingTest extends BaseUiTest {
         LoginSteps loginSteps = new LoginSteps();
 
         BaseSteps.navigate();
-        Assert.assertTrue(loginSteps.loaded());
+        Assert.assertTrue(loginSteps.waitUntilLoaded());
     }
 }
 

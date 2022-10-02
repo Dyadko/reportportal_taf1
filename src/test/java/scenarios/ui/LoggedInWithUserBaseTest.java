@@ -11,7 +11,7 @@ class LoggedInWithUserBaseTest extends BaseUiTest {
         LoginSteps loginSteps = new LoginSteps();
 
         BaseSteps.navigate();
-        loginSteps.loaded();
+        loginSteps.waitUntilLoaded();
         loginSteps.login(new DefaultUser());
     }
 }

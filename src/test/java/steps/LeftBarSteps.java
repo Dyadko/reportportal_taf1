@@ -18,8 +18,13 @@ public class LeftBarSteps {
         leftBar.dashboardIcon.click();
     }
 
+    @Step(value = "Left Bar. Open Launches")
+    public void openLaunches() {
+        leftBar.launchesIcon.click();
+    }
+
     @Step(value = "Waiting for Left Bar to load...")
-    public boolean loaded() {
-        return leftBar.loaded();
+    public boolean waitUntilLoaded() {
+        return leftBar.waitUntilLoaded();
     }
 }
